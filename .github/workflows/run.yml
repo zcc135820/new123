@@ -1,7 +1,7 @@
-name: pc-sync
+name: run-sync
 on:
   schedule:
-    - cron: '1 */3 * * *'
+    - cron: '14 */3 * * *'
   workflow_dispatch:
   watch:
     types: started
@@ -23,6 +23,6 @@ jobs:
         if: env.PAT
         with:
           source_repo: "https://github.com/lanhebe/proxypool.git"
-          source_branch: "main"
-          destination_branch: "heroku"
+          source_branch: "master"
+          destination_branch: "DL123"
           github_token: ${{ secrets.PAT }}
